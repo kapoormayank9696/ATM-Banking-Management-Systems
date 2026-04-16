@@ -1,0 +1,27 @@
+CREATE DATABASE atm;
+USE atm;
+
+CREATE TABLE users (
+user_id INT PRIMARY KEY AUTO_INCREMENT,
+username VARCHAR(100) UNIQUE NOT NULL,
+password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE accounts (
+account_id INT PRIMARY KEY AUTO_INCREMENT,
+account_number BIGINT UNIQUE NOT NULL,
+user_id INT NOT NULL,
+pin VARCHAR(255) NOT NULL,
+balance DECIMAL(10,2) NOT NULL CHECK(balance >= 0),
+FOREIGN KEY(user_id) REFERENCES users(user_id)
+);
+
+CREATE TABLE transactions (
+transaction_id INT PRIMARY KEY AUTO_INCREMENT,
+account_id INT NOT NULL,
+amount DECIMAL(10,2) NOT NULL CHECK(amount > 0),
+transaction_type ENUM('DEPOSIT','WITHDRAW','TRANSFER') NOT NULL,
+transaction_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+FOREIGN KEY(account_id) REFERENCES accounts(account_id)
+);
+-- DROP DATABASE atm;
