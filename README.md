@@ -95,6 +95,7 @@ ATM-Banking-Management-Systems/
 │ │ │ └── UserDAO.java
 │ │ ├── model/
 | | | ├── Accounts.java
+| | | ├── Transaction.java
 │ │ │ └── Users.java
 │ │ ├── util/
 │ │ │ └── DBConnection.java
