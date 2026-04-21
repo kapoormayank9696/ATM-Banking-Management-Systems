@@ -47,6 +47,9 @@ public class AccountDAO {
 
         try (Connection connection = DBConnection.getConnection()) {
             connection.setAutoCommit(false);
+            // “I used SERIALIZABLE isolation to ensure strict consistency in concurrent banking transactions,
+            // preventing dirty reads, lost updates, and race conditions in account balance updates.”
+            connection.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE);
 
             if (amount.compareTo(BigDecimal.ZERO) <= 0) return false;
 
@@ -111,11 +114,12 @@ public class AccountDAO {
      * Validates PIN and balance before deducting funds and logging transaction.
      */
     public boolean withdraw(BigInteger accountNumber, BigDecimal amount, String inputPin) {
-        String fetchQuery = "SELECT * FROM accounts WHERE account_number = ?";
+        String fetchQuery = "SELECT * FROM accounts WHERE account_number = ? FOR UPDATE";
         String updateQuery = "UPDATE accounts SET balance = balance - ? WHERE account_number = ?";
 
         try (Connection connection = DBConnection.getConnection()) {
             connection.setAutoCommit(false);
+            connection.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE);
 
             // 1. Fetch and Verify
             PreparedStatement psFetch = connection.prepareStatement(fetchQuery);
@@ -160,16 +164,19 @@ public class AccountDAO {
     public boolean transferMoney(BigInteger fromAccount, BigInteger toAccount, BigDecimal amount, String pin) {
         if (fromAccount.equals(toAccount)) return false;
 
-        String selectQuery = "SELECT account_id, balance, pin FROM accounts WHERE account_number = ?";
+        String selectQuery = "SELECT account_id, balance, pin, account_number FROM accounts WHERE account_number IN (?, ?) FOR UPDATE";
         String updateBalance = "UPDATE accounts SET balance = balance + ? WHERE account_number = ?";
 
         try (Connection connection = DBConnection.getConnection()) {
             connection.setAutoCommit(false);
+            connection.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE);
 
             // 1. Sender Validation
-            PreparedStatement ps1 = connection.prepareStatement(selectQuery);
-            ps1.setString(1, fromAccount.toString());
-            ResultSet rs1 = ps1.executeQuery();
+            PreparedStatement ps = connection.prepareStatement(selectQuery);
+            ps.setString(1, fromAccount.toString());
+            ps.setString(2, toAccount.toString());
+
+            ResultSet rs1 = ps.executeQuery();
             if (!rs1.next()) return false;
 
             Accounts sender = new Accounts(rs1.getInt("account_id"), fromAccount, 0, rs1.getString("pin"), rs1.getBigDecimal("balance"));
