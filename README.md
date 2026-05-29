@@ -89,7 +89,7 @@ ATM-Banking-Management-Systems/
 │
 - ├── src/
 - │ ├── Banking_ATM_Simulator/
-- │ │ ├── DAO/
+-       │ ├── DAO/
 - | | | ├── AccountDAO.java
 - | | | ├── TransactionDAO.java
 - │ │ │ └── UserDAO.java
