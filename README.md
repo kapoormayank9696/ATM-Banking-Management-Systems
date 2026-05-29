@@ -90,25 +90,25 @@ CREATE TABLE transactions (
       
     - ├── src/
     - ├── Banking_ATM_Simulator/
-       - ├── DAO/
+       - DAO/
               - ├── AccountDAO.java
               - ├── TransactionDAO.java
               - └── UserDAO.java
-       - ├── model/
+       - model/
               - ├── Accounts.java
               - ├── Transaction.java
               - └── Users.java
-        - ├── util/
+        - util/
               -  └── DBConnection.java
-        - └── Main.java
-        - ├── README.md
-        - └── pom.xml (if using Maven)
+        - Main.java
+        - README.md
+        - pom.xml (if using Maven)
 
 ---
 
 ### ⚙️ How to Run the Project
 Clone the repository:
-git clone https://github.com/your-username/ATM-Banking-Management-System.git
+git clone https://github.com/kapoormayank9696/ATM-Banking-Management-System.git
 Setup Database:
 Create database:
 CREATE DATABASE atm;
