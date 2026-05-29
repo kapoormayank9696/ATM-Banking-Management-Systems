@@ -88,13 +88,13 @@ CREATE TABLE transactions (
 
 # ATM-Banking-Management-Systems/
       
-    - ├── src/
-    - ├── Banking_ATM_Simulator/
-       - DAO/
+    - src/
+    - Banking_ATM_Simulator/
+        - DAO/
               - ├── AccountDAO.java
               - ├── TransactionDAO.java
               - └── UserDAO.java
-       - model/
+        - model/
               - ├── Accounts.java
               - ├── Transaction.java
               - └── Users.java
