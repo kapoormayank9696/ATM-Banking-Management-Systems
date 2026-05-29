@@ -85,24 +85,21 @@ CREATE TABLE transactions (
 ---
 
 ### 📂 Project Structure
-ATM-Banking-Management-Systems/
-│
-- ├── src/
-- │ ├── Banking_ATM_Simulator/
-  
+
+# ATM-Banking-Management-Systems/
+      
+    - ├── src/
+    - ├── Banking_ATM_Simulator/
        - ├── DAO/
               - ├── AccountDAO.java
               - ├── TransactionDAO.java
               - └── UserDAO.java
-  
        - ├── model/
               - ├── Accounts.java
               - ├── Transaction.java
               - └── Users.java
-  
         - ├── util/
               -  └── DBConnection.java
-  
         - └── Main.java
         - ├── README.md
         - └── pom.xml (if using Maven)
