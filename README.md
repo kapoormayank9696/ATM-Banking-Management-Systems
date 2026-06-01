@@ -55,6 +55,7 @@ CREATE TABLE users (
     username VARCHAR(100) UNIQUE NOT NULL,
     password VARCHAR(255) NOT NULL
 );
+
 🔹 Accounts Table
 CREATE TABLE accounts (
     account_id INT PRIMARY KEY AUTO_INCREMENT,
@@ -64,6 +65,7 @@ CREATE TABLE accounts (
     balance DECIMAL(10,2) NOT NULL CHECK(balance >= 0),
     FOREIGN KEY(user_id) REFERENCES users(user_id)
 );
+
 🔹 Transactions Table
 CREATE TABLE transactions (
     transaction_id INT PRIMARY KEY AUTO_INCREMENT,
