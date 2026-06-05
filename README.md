@@ -6,7 +6,7 @@
 A simple **Java-based ATM Banking Management System** that allows users to add, view, search, update, and delete contacts. This project uses **JDBC** to connect with a **MySQL database** and demonstrates a full CRUD application using **Java**, **DAO pattern**, and **service layer architecture**.
 ---
 
-### 📌 Project Overview
+# 📌 Project Overview
 
 The ATM Banking Management System is a Java-based application that simulates real-world ATM operations.
 It uses JDBC for database connectivity and secure password hashing to protect sensitive user data.
@@ -18,7 +18,7 @@ This project demonstrates:
 - 🔹 Secure authentication system
 ---
 
-🚀 Features
+# 🚀 Features
 
 - 🔐 Secure User Authentication (Hashed Password & PIN)
 - 💰 Balance Inquiry
@@ -29,7 +29,7 @@ This project demonstrates:
 - 🚪 Safe Exit System
 ---
 
-### 🛠️ Technologies Used
+# 🛠️ Technologies Used
 
 - Java (Core Java)
 - JDBC (Java Database Connectivity)
@@ -39,7 +39,7 @@ This project demonstrates:
 
 ---
 
-### 🔐 Security Implementation
+# 🔐 Security Implementation
 - Passwords are not stored in plain text
 - Passwords and PINs are hashed before storing
 - Protects against unauthorized access
@@ -47,7 +47,7 @@ This project demonstrates:
 
 ---
 
-### 🗄️ Database Schema (MySQL)
+# 🗄️ Database Schema (MySQL)
 ```sql
 🔹 Users Table
 CREATE TABLE users (
@@ -80,13 +80,13 @@ CREATE TABLE transactions (
 
 ----
 
-### 🔗 Database Relationships
+# 🔗 Database Relationships
 - One User → Multiple Accounts
 - One Account → Multiple Transactions
 
 ---
 
-### 📂 Project Structure
+# 📂 Project Structure
 
 # ATM-Banking-Management-Systems/
  - src/
@@ -107,7 +107,7 @@ CREATE TABLE transactions (
    
 ---
 
-### ⚙️ How to Run the Project
+# ⚙️ How to Run the Project
 Clone the repository:
 git clone https://github.com/kapoormayank9696/ATM-Banking-Management-System.git
 Setup Database:
@@ -123,7 +123,7 @@ Run Main.java
 
 ---
 
-### 🧪 Sample Workflow
+# 🧪 Sample Workflow
 1. Enter Account Number & PIN
 2. System verifies hashed credentials
 3. Choose operation:
@@ -134,7 +134,7 @@ Run Main.java
 
 ----
 
-### 🔮 Future Enhancements
+# 🔮 Future Enhancements
 - GUI Interface (Java Swing / JavaFX)
 - OTP-based authentication
 - Mini statement generation
@@ -143,7 +143,7 @@ Run Main.java
 
 ---
 
-## License 📝
+# License 📝
 This project is open-source and available under the MIT License.
 
 Author
