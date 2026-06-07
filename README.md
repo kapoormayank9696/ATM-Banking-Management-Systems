@@ -99,6 +99,7 @@ CREATE TABLE transactions (
         - ├── Accounts.java
         - ├── Transaction.java
         - └── Users.java
+    - screenshots/
     - util/
         -  └── DBConnection.java
     - Main.java
