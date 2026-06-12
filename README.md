@@ -154,6 +154,12 @@ GitHub: https://github.com/kapoormayank9696
 
 ---
 
-If you want, I can also **make a shorter, more attractive GitHub-ready version** that looks modern with badges for Java, MySQL, and license.  
+If you want, I can also **make a shorter, more attractive GitHub-ready version** that looks modern with badges for Java, MySQL, and license.
+
+---
+
+# 🚀 Happy Coding!
+
+---
 
 Do you want me to do that version too?
