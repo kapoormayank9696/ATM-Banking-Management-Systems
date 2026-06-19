@@ -77,7 +77,6 @@ CREATE TABLE transactions (
 );
 
 ```
-
 ----
 
 # 🔗 Database Relationships
