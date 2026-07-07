@@ -27,6 +27,7 @@ This project demonstrates:
 - 🧾 Transaction History
 - 🗄️ MySQL Database Integration (JDBC)
 - 🚪 Safe Exit System
+- 
 ---
 
 # 🛠️ Technologies Used
