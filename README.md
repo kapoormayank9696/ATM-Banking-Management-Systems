@@ -4,6 +4,7 @@
 [![MySQL](https://img.shields.io/badge/MySQL-8+-green)](https://www.mysql.com/)
 [![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 A simple **Java-based ATM Banking Management System** that allows users to add, view, search, update, and delete contacts. This project uses **JDBC** to connect with a **MySQL database** and demonstrates a full CRUD application using **Java**, **DAO pattern**, and **service layer architecture**.
+
 ---
 
 # 📌 Project Overview
