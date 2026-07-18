@@ -17,6 +17,7 @@ This project demonstrates:
 - 🔹 JDBC integration
 - 🔹 Database design
 - 🔹 Secure authentication system
+  
 ---
 
 # 🚀 Features
